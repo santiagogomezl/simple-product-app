@@ -1,0 +1,21 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header h1{
+    margin: 20px auto;
+    text-transform: uppercase;
+    
+}
+
+.nav-button{
+    align-self: center;
+}
+
+.products-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}

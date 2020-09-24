@@ -1,0 +1,47 @@
+.Product{
+    width: calc(50% - 20px);
+    height: 400px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color:rgb(229,229,229);
+    display: flex;
+    justify-content: center;
+}
+
+.Product:nth-child(odd){
+    margin-right: 20px;
+}
+
+.product-logo{
+    align-self: center;
+}
+
+.product-logo h2{
+    text-align: center;
+}
+
+.product-logo img{
+    width: 200px;
+}
+
+.compare-button{
+    display: block;
+    margin: 10px auto;
+    /* font-size: 1em;
+    
+    color: #EEEEEE;
+    background-color: #333333;
+    padding: 10px;
+    border: 1px solid #CCCCCC; */
+    cursor: pointer;
+}
+
+.compate-button:hover{
+    background-color: #EEEEEE;
+    color: #333333;
+} 
+
+.clicked-button{
+    background-color: red;
+    color: #333333;
+}

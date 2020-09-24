@@ -1,0 +1,12 @@
+h1{ font-size: 2.4em; }
+h2{ font-size: 2em; }
+
+@media screen and (min-device-width: 1200px){
+   .App{
+      width: 80%;
+      max-width: 1200px;
+      height: auto;
+      margin: 0 auto;
+   }
+
+}

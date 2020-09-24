@@ -1,0 +1,26 @@
+.CompareProducts{
+    width:100%;
+}
+
+th{
+    padding:20px;
+}
+
+table, td, tr, th{
+    border: 1px solid black;
+}
+
+.compare-table{
+    margin:20px auto;
+    text-align: center;
+}
+
+.compare-logo{
+    width: 80px;
+    padding: 0 10px;
+}
+
+.compare-product-name{
+    display: block;
+    margin: 5px 0;
+}
