@@ -6,18 +6,31 @@ th{
     padding:20px;
 }
 
-table, td, tr, th{
-    border: 1px solid black;
+td, tr, th{
+    border: 1px solid rgb(230, 230, 230);
+    border-collapse: collapse;
 }
+
+
 
 .compare-table{
     margin:20px auto;
     text-align: center;
 }
 
+.compare-table a{
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.compare-table a:hover,
+.compare-table a:focus{
+    color: #333333;
+}
+
 .compare-logo{
-    width: 80px;
-    padding: 0 10px;
+    height: 180px;
+    padding: 10px;
 }
 
 .compare-product-name{

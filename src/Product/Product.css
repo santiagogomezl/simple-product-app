@@ -1,47 +1,88 @@
 .Product{
-    width: calc(50% - 20px);
+    width: 100%;
     height: 400px;
     margin-bottom: 20px;
     box-sizing: border-box;
     background-color:rgb(229,229,229);
     display: flex;
     justify-content: center;
-}
-
-.Product:nth-child(odd){
-    margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .product-logo{
-    align-self: center;
-}
-
-.product-logo h2{
+    width: 100%;
     text-align: center;
 }
 
-.product-logo img{
-    width: 200px;
+.product-logo h2{
+    text-transform: uppercase;
 }
 
-.compare-button{
+.product-logo a{
+    color: black;
+}
+
+.product-logo a:hover,
+.product-logo a:focus{
+    text-decoration: underline;
+    color: #333333;
+}
+
+.product-logo img{
+    height: 200px;
+}
+
+.compare-button, button{
     display: block;
     margin: 10px auto;
-    /* font-size: 1em;
-    
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    background-color:rgb(229,229,229);
+    text-align:center;
+    text-transform: uppercase;
+    transition: all 0.1s;
+}
+
+.compare-button:hover, button:hover{
     color: #EEEEEE;
     background-color: #333333;
-    padding: 10px;
-    border: 1px solid #CCCCCC; */
-    cursor: pointer;
-}
-
-.compate-button:hover{
-    background-color: #EEEEEE;
-    color: #333333;
 } 
 
-.clicked-button{
-    background-color: red;
-    color: #333333;
+.compare-button:focus, button:focus{
+    outline: 4px solid #FFFFFF;
 }
+
+.clicked-button{
+    color: #EEEEEE;
+    background-color: #333333;
+}
+
+@media screen and (min-device-width: 1200px){
+    .Product{
+        width: calc(50% - 20px);
+        height: 400px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background-color:rgb(229,229,229);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .Product:nth-child(odd){
+        margin-right: 20px;
+    }
+    
+    .product-logo{
+        align-self: center;
+    }
+    
+    .product-logo h2{
+        text-align: center;
+    }
+    
+    .product-logo img{
+        width: 200px;
+    }
+ 
+ }

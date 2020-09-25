@@ -40,7 +40,7 @@ class Product extends Component{
             <div className="product-logo">
                 <h2><Link to={`/barbell/${(name.toLowerCase())}`} onClick={context.clearProducts}>{name}</Link></h2>
                 <img src={`../img/${logo}`} alt="Barbell Logo"/>
-                <button id={`compare-${id}`} className={`compare-button`} onClick={e => this.handleCompare(e, context.compareProducts)}>compare +</button>
+                <button id={`compare-${id}`} className={`compare-button`} onClick={e => this.handleCompare(e, context.compareProducts)}>compare</button>
             </div>
         </div>
         )}

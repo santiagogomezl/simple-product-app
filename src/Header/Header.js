@@ -15,7 +15,7 @@ class Header extends Component{
             <Link to='/' onClick={context.clearProducts}><span>FORTIX</span></Link>
          </div>
          <div className={`header-compare ${this.context.toCompare ? 'show-compare' : ''}`}>
-            <Link to='/compare'><button>{'compare >>'}</button></Link>
+            <Link to='/compare'><button className="header-button">{'compare >>'}</button></Link>
          </div>
      </header>
       )}

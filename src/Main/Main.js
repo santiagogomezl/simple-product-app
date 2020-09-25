@@ -59,7 +59,7 @@ class Main extends Component{
     }
     
     else if(this.props.match.path === '/compare/'){
-      contentHeader = <h1>{"COMPARE PRODUCTS"}</h1>
+      contentHeader = <h1>{"COMPARE"}</h1>
       content = [
         <CompareProducts compare={this.context.compare}/>,
     ]
