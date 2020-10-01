@@ -5,7 +5,8 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Main from './Main/Main'
 import SimpleProductContext from './SimpleProductContext'
-import store from './store.js';
+import config from './config';
+
 
 
 class App extends Component{
@@ -20,14 +21,29 @@ class App extends Component{
     }
   }
 
-  componentDidMount(){
+  setProduts = barbells => {
     this.setState({
-      barbells: store
+      barbells,
+      error: null,
     })
   }
 
-  componentDidUpdate(){
-   
+  componentDidMount() {
+    fetch(config.API_ENDPOINT, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${config.API_KEY}`
+      }
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.status)
+        }
+        return res.json()
+      })
+      .then(this.setProduts)
+      .catch(error => this.setState({ error }))
   }
 
   compareProducts = (barbell) => {
