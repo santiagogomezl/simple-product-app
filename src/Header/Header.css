@@ -1,13 +1,25 @@
 .Header{
-    max-width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color:#faeb03;;
+    width: 100%;
+    min-width: 400px;
+    max-width: 1200px;
     height: auto;
     min-height: 80px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 0 auto;
     border-bottom: 1px solid rgb(230, 230, 230);
     box-sizing: border-box;
+}
+
+.header-container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .Header a,
@@ -18,19 +30,64 @@
 }
 
 .header-brand span{
-    font-size: 2em;
+    font-size: 1.7em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+}
+
+.header-brand span:after{
+    content: 'SP';
+}
+
+.header-menu ul{
+    display: flex;
+    list-style-type: none;
+    align-self: center;
+}
+
+.header-menu li{
+    margin-right: 10px;
+
+}
+
+.header-menu a{
+    color:#333333
+}
+.header-menu a:hover{
+    text-decoration: underline;
+    color: black;
 }
 
 .header-compare{
     display: none;
+    margin-left: auto;
 }
 
-.header-button{
-    margin:0
-}
+.header-button:hover,
+.header-button:focus{
+    background-color:#333333;
+    color:white
 
+}
 .show-compare{
     display: flex;
-    margin: 0;
 }
 
+@media screen and (min-device-width: 800px){
+    .Header{
+        width: 80%;
+    }
+
+    button.header-button{
+        margin-left: 0;
+    }
+
+    .header-menu ul{
+        padding-left: 20px;
+    }
+
+    .header-brand span:after{
+        content: 'Simple Product App';
+    }
+ 
+ }

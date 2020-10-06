@@ -1,0 +1,10 @@
+.NotFound{
+    padding-top: 90px;
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 250px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

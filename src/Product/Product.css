@@ -3,40 +3,67 @@
     height: 400px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    background-color:rgb(229,229,229);
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-.product-logo{
+.Product:hover{
+    text-decoration: underline;
+}
+
+.demo-intro{
+    width: 80%;
+    margin: 20px auto 40px auto;
+    padding: 0 10px;
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+.product-link{
     width: 100%;
-    text-align: center;
+    height: 100%;
 }
 
-.product-logo h2{
+.product-link a{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    text-decoration: none;
+    color: white
+}
+
+.Product .compare-button{
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+}
+
+.product-information{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-shadow: 0 1px 0 black;
+}
+
+.product-information h2{
+    margin: 0 10px 0 0;
     text-transform: uppercase;
 }
 
-.product-logo a{
-    color: black;
-}
-
-.product-logo a:hover,
-.product-logo a:focus{
-    text-decoration: underline;
-    color: #333333;
-}
-
-.product-logo img{
-    height: 200px;
-}
-
-.compare-button, button{
-    display: block;
-    margin: 10px auto;
+.compare-button, 
+.compare-button:active,
+button,
+button:active{
+    height: 38px;
+    box-sizing: border-box;
+    margin: 0 0 0 10px;
+    padding: 5px 10px;
     cursor: pointer;
-    padding: 10px 20px;
     border: 2px solid #000000;
     background-color:rgb(229,229,229);
     text-align:center;
@@ -45,44 +72,26 @@
 }
 
 .compare-button:hover, button:hover{
-    color: #EEEEEE;
-    background-color: #333333;
+    background-color: #faeb03;;
 } 
 
 .compare-button:focus, button:focus{
-    outline: 4px solid #FFFFFF;
+    outline: 2px solid #FFFFFF;
 }
 
 .clicked-button{
-    color: #EEEEEE;
-    background-color: #333333;
+    background-color: #faeb03;;
 }
 
-@media screen and (min-device-width: 1200px){
+@media screen and (min-device-width: 800px){
     .Product{
         width: calc(50% - 20px);
         height: 400px;
-        margin-bottom: 20px;
         box-sizing: border-box;
-        background-color:rgb(229,229,229);
         display: flex;
         justify-content: center;
-    }
-    
-    .Product:nth-child(odd){
         margin-right: 20px;
     }
     
-    .product-logo{
-        align-self: center;
-    }
-    
-    .product-logo h2{
-        text-align: center;
-    }
-    
-    .product-logo img{
-        width: 200px;
-    }
  
  }

@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import './App.css'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Main from './Main/Main'
+import Landing from './Landing/Landing'
 import SimpleProductContext from './SimpleProductContext'
 import config from './config';
+import NotFound from './NotFound/NotFound'
 
 
 
@@ -18,13 +20,15 @@ class App extends Component{
       barbells:[],
       compare:[],
       toCompare: false,
+      error: null,
     }
   }
 
   setProduts = barbells => {
     this.setState({
       barbells,
-      error: null,
+      compare:[],
+      toCompare: false,
     })
   }
 
@@ -89,14 +93,20 @@ class App extends Component{
         <SimpleProductContext.Provider value={contextValue}>
 
         <Header/>
-          {/* Main */}
-          <Route exact path='/' component={Main} />
+          <Switch>
+            {/* Home */}
+            <Route exact path='/' component={Landing} />
 
-          {/* /barbell/:name */}
-          <Route path='/barbell/:name' component={Main}/> 
+            {/*Demo*/}
+            <Route path='/demo' component={Main} />
 
-          <Route path='/compare/' component={Main}/>
+            {/* /barbell/:name */}
+            <Route path='/barbell/:name' component={Main}/> 
 
+            <Route path='/compare/' component={Main}/>
+
+            <Route path={'*'} component={NotFound} />
+          </Switch>
         </SimpleProductContext.Provider>
         <Footer />        
       </main>

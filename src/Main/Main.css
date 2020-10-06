@@ -6,6 +6,11 @@
     min-width: 400px;
 }
 
+.Main{
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
 .main-header{
     display: flex;
     justify-content: space-between;
@@ -38,12 +43,12 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-@media screen and (min-device-width: 1200px){
-    .App{
-       width: 80%;
-       max-width: 1200px;
+@media screen and (min-device-width: 800px){
+    .Main{
+       width: 100%;
        height: auto;
        margin: 0 auto;
     }

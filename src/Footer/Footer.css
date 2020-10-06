@@ -1,0 +1,34 @@
+.Footer{
+ background-color: #000;
+ color: white;
+ min-width: 400px;
+}
+
+.footer-container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.footer-branding{
+
+}
+
+.Footer a,
+.Footer a:link,
+.Footer a:active{
+    color: white;
+    text-decoration: none;
+}
+
+.Footer a:hover{
+    text-decoration: underline;
+}
+
+.footer-branding img{
+    height: 30px;
+}
+.footer-branding p{
+    font-size: 0.8em;
+    color:rgb(229, 229, 229);
+}

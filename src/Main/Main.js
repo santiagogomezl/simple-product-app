@@ -47,13 +47,13 @@ class Main extends Component{
       const previous = this.getPrevious(barbell)
       const next = this.getNext(barbell)
       contentHeader = [
-        <span className="prev nav-button"><Link to={previous ? previous.name.toLowerCase() : ''}>{'<< prev'}</Link></span>,
-        <h1>{barbellName}</h1>,
-        <span className="next nav-button"><Link to={next ? next.name.toLowerCase() : ''}>{'next >>'}</Link></span>,
+        <span key={'prev'} className="prev nav-button"><Link to={previous ? previous.name.toLowerCase() : ''}>{'<< prev'}</Link></span>,
+        <h1 key={'barbell-name'}>{barbellName}</h1>,
+        <span key={'next'} className="next nav-button"><Link to={next ? next.name.toLowerCase() : ''}>{'next >>'}</Link></span>,
       ]
       if(typeof barbell !== 'undefined'){
           content = [
-              <ProductDetail {...barbell} history={this.props.history}/>,
+              <ProductDetail key={`product-${barbell.id}`} {...barbell} history={this.props.history}/>,
           ]
       }
     }
@@ -61,17 +61,26 @@ class Main extends Component{
     else if(this.props.match.path === '/compare/'){
       contentHeader = <h1>{"COMPARE"}</h1>
       content = [
-        <CompareProducts compare={this.context.compare}/>,
+        <CompareProducts key={'compare'} compare={this.context.compare} history={this.props.history}/>,
     ]
     }
 
 
-    else if(this.props.match.path === '/'){
+    else if(this.props.match.path === '/demo'){
       contentHeader = <h1>{"JUST A BARBELL"}</h1>
-      content = this.context.barbells.map((barbell, i) => {
-        const key = `${i}`;
-        return(<Product key={key} {...barbell} />)
-      }) 
+      content = [
+        <p className="demo-intro" key={'demo-intro'}>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+          quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. 
+        </p>
+      ]
+      content = [content, this.context.barbells.map((barbell, i) => {
+          const key = `${i}`;
+          return(<Product key={key} {...barbell} />)
+        })
+      ] 
     }
 
     return (

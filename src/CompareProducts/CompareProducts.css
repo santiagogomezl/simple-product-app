@@ -2,20 +2,28 @@
     width:100%;
 }
 
-th{
-    padding:20px;
-}
-
-td, tr, th{
-    border: 1px solid rgb(230, 230, 230);
-    border-collapse: collapse;
-}
-
-
-
 .compare-table{
+    width: auto;
     margin:20px auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.compare-table ul{
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0px;
+    font-size: 1.2em;
+}
+
+.compare-table ul:nth-child(1){
+    display: none;
+}
+
+.compare-table li{
+    padding: 10px;
 }
 
 .compare-table a{
@@ -29,11 +37,52 @@ td, tr, th{
 }
 
 .compare-logo{
-    height: 180px;
-    padding: 10px;
+    height: 280px;
+    width: 280px;
+    object-fit: cover;
 }
 
 .compare-product-name{
     display: block;
     margin: 5px 0;
 }
+
+@media screen and (min-device-width: 800px){
+    .compare-table{
+        width: auto;
+        margin:20px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .compare-table li{
+        padding-right: 0;
+    }
+
+    .compare-logo{
+        height: 155px;
+        width: 155px;
+    }
+ }
+
+
+ @media screen and (min-device-width: 1200px){
+    .compare-table{
+        width: auto;
+        margin:20px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .compare-logo{
+        height: 205px;
+        width: 205px;
+    }
+
+    .compare-table ul:nth-child(1){
+        display: inline-block;
+        margin-top: 240px;
+    }
+ }

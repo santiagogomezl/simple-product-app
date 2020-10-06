@@ -7,7 +7,7 @@ class ProductDetail extends Component{
     getImages(images){
         let imagesMarkup = []
         for(let i = 0; i < images.length; i++){
-            imagesMarkup = [...imagesMarkup, <div className="image-container"><img src={`../img/${images[i]}`} alt="Barbell"></img></div>]
+            imagesMarkup = [...imagesMarkup, <div key={`image-${i}`} className="image-container"><img src={`../img/${images[i]}`} alt="Barbell"></img></div>]
         }
         return imagesMarkup
     }
@@ -15,7 +15,7 @@ class ProductDetail extends Component{
     render(){
 
 
-    const {name, logo, weight, lenght, diameter, images, details, price} = this.props
+    const { logo, weight, lenght, diameter, images, details, price} = this.props
     return (
         <SimpleProductContext.Consumer>
         {(context) => (
@@ -49,7 +49,7 @@ class ProductDetail extends Component{
                     <p>{details}</p>
                     <div className="product-order">
                         <span>${price}</span>
-                        <a className="shop-button">visit shop</a>
+                        {/* <a className="shop-button" href={''} target="_blank">visit shop</a> */}
                     </div>
                 </div>
             </div>
