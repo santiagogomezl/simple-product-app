@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Simple Product App
 
-The Simple Product App allows you to quickly setup a site for launching a product or idea. Gather feedback and set your enterprise in motion. This is meant to be a light weight template to get your idea up and running hassel free.
+The Simple Product App allows you to quickly set up a site for launching a product or idea. Gather feedback and set your enterprise in motion. This is meant to be a light weight template to get your idea up and running hassel free.
 
 ## Live Site
 
