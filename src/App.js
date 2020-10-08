@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
 import './App.css'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
@@ -90,25 +90,28 @@ class App extends Component{
 
     return(
       <main className='App'>
-        <SimpleProductContext.Provider value={contextValue}>
+        <BrowserRouter>
+          <SimpleProductContext.Provider value={contextValue}>
 
-        <Header/>
-          <Switch>
-            {/* Home */}
-            <Route exact path='/' component={Landing} />
+            <Header/>
+                <Switch>
+                  {/* Home */}
+                  <Route exact path='/' component={Landing} />
 
-            {/*Demo*/}
-            <Route path='/demo' component={Main} />
+                  {/*Demo*/}
+                  <Route path='/demo' component={Main} />
 
-            {/* /barbell/:name */}
-            <Route path='/barbell/:name' component={Main}/> 
+                  {/* /barbell/:name */}
+                  <Route path='/barbell/:name' component={Main}/> 
 
-            <Route path='/compare/' component={Main}/>
+                  <Route path='/compare/' component={Main}/>
 
-            <Route path={'*'} component={NotFound} />
-          </Switch>
-        </SimpleProductContext.Provider>
-        <Footer />        
+                  <Route path={'*'} component={NotFound} />
+                </Switch>
+            
+            <Footer />
+          </SimpleProductContext.Provider> 
+        </BrowserRouter>
       </main>
     );
   } 

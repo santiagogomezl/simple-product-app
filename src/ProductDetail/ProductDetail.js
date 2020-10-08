@@ -49,7 +49,6 @@ class ProductDetail extends Component{
                     <p>{details}</p>
                     <div className="product-order">
                         <span>${price}</span>
-                        {/* <a className="shop-button" href={''} target="_blank">visit shop</a> */}
                     </div>
                 </div>
             </div>

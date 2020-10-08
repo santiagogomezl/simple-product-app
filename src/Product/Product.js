@@ -34,21 +34,21 @@ class Product extends Component{
   render(){
     const {id, name, logo } = this.props
     return (
-        <SimpleProductContext.Consumer>
-        {(context) => (
-        <div className="Product" style={{backgroundImage: `url(../img/${logo})`}}>
-            <div className="product-link">
-                <Link to={`/barbell/${(name.toLowerCase())}`} onClick={context.clearProducts}>
-                    <div className="product-information">
-                        <h2>{name}</h2>
-                    </div>
-                </Link>
+            <SimpleProductContext.Consumer>
+            {(context) => (
+            <div className="Product" style={{backgroundImage: `url(../img/${logo})`}}>
+                <div className="product-link">
+                    <Link to={`/barbell/${(name.toLowerCase())}`} onClick={context.clearProducts}>
+                        <div className="product-information">
+                            <h2>{name}</h2>
+                        </div>
+                    </Link>
+                </div>
+                <button id={`compare-${id}`} className={`compare-button`} onClick={e => this.handleCompare(e, context.compareProducts)}>compare</button>
             </div>
-            <button id={`compare-${id}`} className={`compare-button`} onClick={e => this.handleCompare(e, context.compareProducts)}>compare</button>
-        </div>
-        )}
-        </SimpleProductContext.Consumer>
-
+            )}
+            
+            </SimpleProductContext.Consumer>
     );
   }
 

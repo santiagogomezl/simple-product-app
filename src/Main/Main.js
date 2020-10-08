@@ -55,6 +55,8 @@ class Main extends Component{
           content = [
               <ProductDetail key={`product-${barbell.id}`} {...barbell} history={this.props.history}/>,
           ]
+      }else{
+          this.props.history.push('/')
       }
     }
     
@@ -84,14 +86,14 @@ class Main extends Component{
     }
 
     return (
-        <section className="Main">
-            <div className="main-header">
-              {contentHeader}
-            </div>
-            <div className="products-container">
-              {content}
-            </div>
-        </section>
+          <section className="Main">
+              <div className="main-header">
+                {contentHeader}
+              </div>
+              <div className="products-container">
+                {content}
+              </div>
+          </section>
     );
   }
 
