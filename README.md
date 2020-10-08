@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Simple Product App
 
-The Simple Product App allows you to quickly setup a site for launching a product or idea. Gather feedback 
+The Simple Product App allows you to quickly setup a site for launching a product or idea. Gather feedback and set your enterprise in motion. This is meant to be a light weight template to get your idea up and running hassel free.
 
 ## Live Site
 
@@ -28,18 +28,14 @@ Compare Page
 
 <img width="600" alt="Compare Page" src="https://user-images.githubusercontent.com/63277146/95481429-d837ec80-0941-11eb-860e-77c228b3cd0c.png">
 
-
-### Summary
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### Technologies
 
-HTML
-CSS
-JavaScript
-React
+HTML</br>
+CSS</br>
+JavaScript</br>
+React</br>
+React Routing</br>
+
 
 
 
