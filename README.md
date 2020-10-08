@@ -12,11 +12,8 @@ In the project directory, you can run:
 
 ### Screenshots
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Alt text](/63277146/95481451-de2dcd80-0941-11eb-8ae4-11e77a6a5cec.png?raw=true "Optional Title")
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### Summary
 
