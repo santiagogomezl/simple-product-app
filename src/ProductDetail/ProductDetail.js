@@ -4,6 +4,10 @@ import './ProductDetail.css';
 
 class ProductDetail extends Component{
 
+    static defaultProps={
+        images: '',
+      }
+
     getImages(images){
         let imagesMarkup = []
         for(let i = 0; i < images.length; i++){

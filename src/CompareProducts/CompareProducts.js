@@ -5,6 +5,9 @@ import './CompareProducts.css';
 
 class CompareProducts extends Component{
     static contextType = SimpleProductContext
+    static defaultProps = {
+        compare: 0
+    }
 
     componentDidMount(){
         if(this.props.compare.length < 1){

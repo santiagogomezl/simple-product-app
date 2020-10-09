@@ -8,6 +8,10 @@ import CompareProducts from '../CompareProducts/CompareProducts';
 
 class Main extends Component{
   static contextType = SimpleProductContext;
+  static defaultProps={
+    match: {params: '/demo'}
+  }
+  
 
   getBarbell(barbellName){
     const name = barbellName.charAt(0).toUpperCase() + barbellName.slice(1)
@@ -40,8 +44,10 @@ class Main extends Component{
 
     let content = [];
     let contentHeader = [];
+    const path = this.props.match.path
+   
 
-    if(this.props.match.path === '/barbell/:name'){
+    if( path === '/barbell/:name'){
       const barbellName = this.props.match.params.name;
       const barbell = this.getBarbell(barbellName);
       const previous = this.getPrevious(barbell)
@@ -60,7 +66,7 @@ class Main extends Component{
       }
     }
     
-    else if(this.props.match.path === '/compare/'){
+    else if(path === '/compare/'){
       contentHeader = <h1>{"COMPARE"}</h1>
       content = [
         <CompareProducts key={'compare'} compare={this.context.compare} history={this.props.history}/>,
@@ -68,7 +74,7 @@ class Main extends Component{
     }
 
 
-    else if(this.props.match.path === '/demo'){
+    else if(path === '/demo'){
       contentHeader = <h1>{"JUST A BARBELL"}</h1>
       content = [
         <p className="demo-intro" key={'demo-intro'}>
@@ -98,5 +104,6 @@ class Main extends Component{
   }
 
 }
+
 
 export default Main;

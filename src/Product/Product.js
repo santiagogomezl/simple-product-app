@@ -5,6 +5,10 @@ import './Product.css';
 
 class Product extends Component{
     static contextType = SimpleProductContext;
+    static defaultProps={
+        name: '',
+      }
+       
     state={
         clicked: false
     }
@@ -36,8 +40,8 @@ class Product extends Component{
     return (
             <SimpleProductContext.Consumer>
             {(context) => (
-            <div className="Product" style={{backgroundImage: `url(../img/${logo})`}}>
-                <div className="product-link">
+            <div className="Product">
+                <div className="product-link" style={{backgroundImage: `url(../img/${logo})`}}>
                     <Link to={`/barbell/${(name.toLowerCase())}`} onClick={context.clearProducts}>
                         <div className="product-information">
                             <h2>{name}</h2>
