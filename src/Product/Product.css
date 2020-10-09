@@ -49,10 +49,15 @@
     text-transform: uppercase;
 }
 
+.compare-button{
+    margin-top:10px;
+}
+
 .compare-button, 
 .compare-button:active,
 button,
-button:active{
+button:active
+{
     width: 100%;
     height: 38px;
     box-sizing: border-box;
@@ -65,20 +70,19 @@ button:active{
     transition: all 0.1s;
 }
 
-.Product .compare-button{
-    margin-top:10px
-}
 
-.compare-button:hover, button:hover{
+
+/* .compare-button:hover, button:hover{
     background-color: #faeb03;;
-} 
+}  */
 
-.compare-button:focus, button:focus{
+.compare-button:focus,
+button:focus{
     outline: 2px solid #FFFFFF;
 }
 
 .clicked-button{
-    background-color: #faeb03;;
+    background-color: #faeb03;
 }
 
 @media screen and (min-device-width: 800px){
