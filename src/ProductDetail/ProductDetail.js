@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import SimpleProductContext from '../SimpleProductContext'
-import './ProductDetail.css';
+import './ProductDetail.css'
 
 class ProductDetail extends Component{
 
@@ -63,9 +63,9 @@ class ProductDetail extends Component{
         </div>
         )}
         </SimpleProductContext.Consumer>
-    );
+    )
   }
 
 }
 
-export default ProductDetail;
+export default ProductDetail

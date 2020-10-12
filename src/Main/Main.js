@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './Main.css';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import './Main.css'
 import Product from '../Product/Product'
 import ProductDetail from '../ProductDetail/ProductDetail'
-import SimpleProductContext from '../SimpleProductContext';
-import CompareProducts from '../CompareProducts/CompareProducts';
+import SimpleProductContext from '../SimpleProductContext'
+import CompareProducts from '../CompareProducts/CompareProducts'
 
 class Main extends Component{
-  static contextType = SimpleProductContext;
+  static contextType = SimpleProductContext
   static defaultProps={
     match: {params: '/demo'}
   }
@@ -15,7 +15,7 @@ class Main extends Component{
 
   getBarbell(barbellName){
     const name = barbellName.charAt(0).toUpperCase() + barbellName.slice(1)
-    return this.context.barbells.find( barbell => name === barbell.name);
+    return this.context.barbells.find( barbell => name === barbell.name)
   }
 
   getPrevious(current){
@@ -26,7 +26,7 @@ class Main extends Component{
     }else{
       prevId = id - 1
     }
-    return this.context.barbells.find( barbell => prevId === barbell.id);
+    return this.context.barbells.find( barbell => prevId === barbell.id)
   }
 
   getNext(current){
@@ -37,19 +37,19 @@ class Main extends Component{
     }else{
       nextId = id +1
     }
-    return this.context.barbells.find( barbell => nextId === barbell.id);
+    return this.context.barbells.find( barbell => nextId === barbell.id)
   }
-
+    //Renders dynamic content and header based on /api/path
   render(){
 
-    let content = [];
-    let contentHeader = [];
+    let content = []
+    let contentHeader = []
     const path = this.props.match.path
    
-
+    //Dynamic routing to /barbell/:name 
     if( path === '/barbell/:name'){
-      const barbellName = this.props.match.params.name;
-      const barbell = this.getBarbell(barbellName);
+      const barbellName = this.props.match.params.name
+      const barbell = this.getBarbell(barbellName)
       const previous = this.getPrevious(barbell)
       const next = this.getNext(barbell)
       contentHeader = [
@@ -66,6 +66,7 @@ class Main extends Component{
       }
     }
     
+    //Dynamic content for compare products
     else if(path === '/compare/'){
       contentHeader = <h1>{"COMPARE"}</h1>
       content = [
@@ -73,7 +74,7 @@ class Main extends Component{
     ]
     }
 
-
+    //Dynamic content for main content
     else if(path === '/demo'){
       contentHeader = <h1>{"JUST A BARBELL"}</h1>
       content = [
@@ -85,7 +86,7 @@ class Main extends Component{
         </p>
       ]
       content = [content, this.context.barbells.map((barbell, i) => {
-          const key = `${i}`;
+          const key = `${i}`
           return(<Product key={key} {...barbell} />)
         })
       ] 
@@ -100,10 +101,10 @@ class Main extends Component{
                 {content}
               </div>
           </section>
-    );
+    )
   }
 
 }
 
 
-export default Main;
+export default Main

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import SimpleProductContext from '../SimpleProductContext'
-import './Header.css';
+import './Header.css'
 
 class Header extends Component{
   static contextType = SimpleProductContext
@@ -28,10 +28,10 @@ class Header extends Component{
         </header>
           )}
         </SimpleProductContext.Consumer>
-    );
+    )
   }
   
 }
 
 
-export default Header;
+export default Header

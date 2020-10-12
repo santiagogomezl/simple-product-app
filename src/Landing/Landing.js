@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './Landing.css';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import './Landing.css'
 
 class Landing extends Component{
   
@@ -18,10 +18,10 @@ class Landing extends Component{
               </div>
           </div>
         </div>
-    );
+    )
   }
   
 }
 
 
-export default Landing;
+export default Landing

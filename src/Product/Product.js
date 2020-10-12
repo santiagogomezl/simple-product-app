@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import SimpleProductContext from '../SimpleProductContext';
-import './Product.css';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import SimpleProductContext from '../SimpleProductContext'
+import './Product.css'
 
 class Product extends Component{
-    static contextType = SimpleProductContext;
+    static contextType = SimpleProductContext
     static defaultProps={
         name: '',
       }
@@ -13,13 +13,15 @@ class Product extends Component{
         clicked: false
     }
 
+    //Updates 'clicked' state throught context
     handleCompare(event, callback){
-        event.preventDefault();
+        event.preventDefault()
         callback(this.props)
         this.setState({clicked: (!this.state.clicked)})
         this.toogleClass(this.props.id)
     }
 
+    //Toogles class to compare button
     toogleClass(id){
         if(!document.getElementById(`compare-${id}`).classList.contains('clicked-button')){
             document.getElementById(`compare-${id}`).classList.add('clicked-button')
@@ -53,9 +55,9 @@ class Product extends Component{
             )}
             
             </SimpleProductContext.Consumer>
-    );
+    )
   }
 
 }
 
-export default Product;
+export default Product

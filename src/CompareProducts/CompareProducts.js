@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import SimpleProductContext from '../SimpleProductContext'
-import {Link} from 'react-router-dom';
-import './CompareProducts.css';
+import {Link} from 'react-router-dom'
+import './CompareProducts.css'
 
 class CompareProducts extends Component{
     static contextType = SimpleProductContext
@@ -11,7 +11,7 @@ class CompareProducts extends Component{
 
     componentDidMount(){
         if(this.props.compare.length < 1){
-            this.props.history.push('/');
+            this.props.history.push('/')
         }
     }
 
@@ -56,9 +56,9 @@ class CompareProducts extends Component{
             </div>
             )}
         </SimpleProductContext.Consumer>
-    );
+    )
   }
 
 }
 
-export default CompareProducts;
+export default CompareProducts

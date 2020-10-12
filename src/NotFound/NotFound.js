@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './NotFound.css';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import './NotFound.css'
 
 class NotFound extends Component{
     
@@ -12,9 +12,9 @@ class NotFound extends Component{
               <p>Somethign went wrong. Try going back to the Home Page</p>
               <Link to={'/'}>Home</Link>
           </div>
-    );
+    )
   }
 
 }
 
-export default NotFound;
+export default NotFound

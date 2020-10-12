@@ -65,4 +65,4 @@ const store = [
     },
 ]
 
-export default store;
+export default store

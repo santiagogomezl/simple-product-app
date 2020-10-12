@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {Route, BrowserRouter, Switch} from 'react-router-dom';
+import React, {Component} from 'react'
+import {Route, BrowserRouter, Switch} from 'react-router-dom'
 import './App.css'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Main from './Main/Main'
 import Landing from './Landing/Landing'
 import SimpleProductContext from './SimpleProductContext'
-import config from './config';
+import config from './config'
 import NotFound from './NotFound/NotFound'
 
 
@@ -56,16 +56,16 @@ class App extends Component{
       this.setState({
         compare: [...this.state.compare, barbell].sort((a, b) => {return a.id-b.id}),
         toCompare: this.state.compare.length+1 > 1 ? true : false
-      });
+      })
 
     }else{
-      const toBeCompared = this.state.compare;
+      const toBeCompared = this.state.compare
       const i = toBeCompared.findIndex(barbell => barbell.id === barbellId)
       toBeCompared.splice(i, 1)
       this.setState({
         compare: toBeCompared.sort((a, b) => {return a.id-b.id}),
         toCompare: this.state.compare.length-1 >= 1 ? true : false
-      });
+      })
     }
 
   }
@@ -113,9 +113,9 @@ class App extends Component{
           </SimpleProductContext.Provider> 
         </BrowserRouter>
       </main>
-    );
+    )
   } 
 
 }
 
-export default App;
+export default App

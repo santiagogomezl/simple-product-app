@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const SimpleProductContext = React.createContext(
     {
@@ -8,6 +8,6 @@ const SimpleProductContext = React.createContext(
         compareProducts: () => {},
         clearProducts: () => {},
     }
-);
+)
 
-export default SimpleProductContext;
+export default SimpleProductContext
