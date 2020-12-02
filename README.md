@@ -28,9 +28,9 @@ Landing Page
 
 <img width="600" alt="Landing Page" src="https://user-images.githubusercontent.com/63277146/100831735-3ac9d800-341b-11eb-9761-b82422b30a3e.png">
 
-Store/Products Page
+Home Page
 
-<img width="600" alt="Store/Products Page" src="https://user-images.githubusercontent.com/63277146/100831742-3dc4c880-341b-11eb-80d3-530199f1cd4c.png">
+<img width="600" alt="Home Page" src="https://user-images.githubusercontent.com/63277146/100831742-3dc4c880-341b-11eb-80d3-530199f1cd4c.png">
 
 Product Details Page
 
