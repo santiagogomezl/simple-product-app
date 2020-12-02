@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Simple Product App
 
-The Simple Product App allows you to quickly set up a site for launching a product or idea. Gather feedback and set your enterprise in motion. This is meant to be a light weight template to get your idea up and running hassel free.
+The Simple Product App allows you to quickly set up a site for launching a product or idea. Gather feedback and set your enterprise in motion. This is meant to be a lightweight template to get your idea up and running - hassel free.
 
 ## Live Site
 
@@ -20,7 +20,7 @@ Password: `admin`
 
 ### Store Features
 
-Create and edit up to 6 product features. Find the icon of your choice by [Font Awesome](https://fontawesome.com/icons?d=gallery) i.e `fa-feature-icon` and make any changes to the on the Admin Store Page
+Create and edit up to 6 product features. Find the icon of your choice by [Font Awesome](https://fontawesome.com/icons?d=gallery) i.e `fa-feature-icon` and make any changes on the Admin Store Page
 
 ### Screenshots
 
