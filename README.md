@@ -15,14 +15,12 @@ https://simple-product-app.vercel.app/
 
 Use the following login credentials with the demo store
 
-Username: `admin`
+Username: `admin` </br>
 Password: `admin`
 
 ### Store Features
 
-Create and edit up to 6 product features on the [Admin Store Page](https://simple-product-app.vercel.app/admin/store).
-
-Find the feature icon of your choice by [Font Awesome](https://fontawesome.com) i.e `fa-feture-icon`
+Create and edit up to 6 product features. Find the icon of your choice by [Font Awesome](https://fontawesome.com/icons?d=gallery) i.e `fa-feature-icon` and make any changes to the on the Admin Store Page
 
 ### Screenshots
 
