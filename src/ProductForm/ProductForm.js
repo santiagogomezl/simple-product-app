@@ -284,9 +284,9 @@ class ProductForm extends Component{
       return response;
     })
     .then(response => response.json())
-    .then( product => {
+    .then(product => {
       callback(product)
-      window.location.href = '/store/' 
+      this.props.history.push('/store') 
     })
     .catch(err => this.displayError(err));
 
