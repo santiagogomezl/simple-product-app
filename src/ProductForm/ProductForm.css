@@ -1,0 +1,104 @@
+.form-error{
+    background-color: red;
+}
+
+.product-form label{
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
+}
+.product-form input,
+.product-form textarea,
+.product-form fieldset{
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.product-form textarea{
+    width: 100% !important;
+    height: 250px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.product-form legend{
+    font-weight: 700;
+}
+
+.product-form fieldset label{
+    font-weight: 400;
+}
+
+.upload-logo{
+    margin-bottom: 20px;
+}
+
+.upload-box{
+    width: 100%;
+    height: auto;
+    padding:10px;
+    background-color: rgba(128,128,128,0.2);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.upload-area{
+    width: 100%;
+    height: auto;
+    padding:10px  10px 100px 10px;;
+    border: rgba(128,128,128,0.5) dashed 4px;
+    box-sizing: border-box;
+}
+
+.upload-box img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.product-form .upload-btn{
+    width: calc(100% - 105px);
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(255,255,255);
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    left:40px;
+    bottom: 50px;
+}
+
+
+.upload-images{
+    margin-bottom: 40px;
+}
+
+.product-form > button{
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-device-width: 736px){
+    .upload-box img{
+        width: calc(50% - 10px);
+        margin-right: 10px;
+        display: inline-block;
+    }
+ }
+ 
+ @media screen and (min-device-width: 1024px){
+    
+ 
+ }

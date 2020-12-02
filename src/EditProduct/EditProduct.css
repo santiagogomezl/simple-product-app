@@ -1,0 +1,8 @@
+@media screen and (min-device-width: 736px){
+    .EditProduct{
+        width: 90%;
+        max-width: 736px;
+        margin: 0 auto;
+     }
+ }
+ 

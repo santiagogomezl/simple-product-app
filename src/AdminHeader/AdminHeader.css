@@ -1,0 +1,37 @@
+.AdminHeader h1{
+    text-transform: capitalize;
+}
+
+.site-menu ul{
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    border-bottom: 1px solid rgba(128,128,128,0.2);
+    box-shadow: 0 1px 1px rgba(128,128,128,0.1);
+}
+
+.site-menu li{
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: rgba(128,128,128,0.2);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.site-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.site-menu li.active-tab{
+    background-color: rgba(128,128,128,0.5);
+}
+
+.form-error{
+    background-color: red;
+}
+
+@media screen and (min-device-width: 800px){
+    
+ }

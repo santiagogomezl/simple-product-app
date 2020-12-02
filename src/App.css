@@ -1,21 +1,39 @@
 .App{
-   max-width: 1200px;
+   width: 100%;
+   min-width: 414px;
+}
+
+.Store,
+.Product,
+.CompareProducts,
+.AdminLogin,
+.AdminProducts,
+.AdminStore,
+.AddProduct,
+.EditProduct{
+   padding: 80px 20px 40px;
 }
 
 h1{ 
    font-family: 'Nunito', sans-serif;
    font-size: 2.4em; 
    font-weight: 900;
+   text-align: center;
 }
 h2{ 
    font-size: 2em; 
    font-family: 'Nunito', sans-serif;
 }
 
-@media screen and (min-device-width: 800px){
+.form-error{
+   background-color: rgba(255,0,0,0.3) !important;
+}
+
+@media screen and (min-device-width: 736px){
    .App{
-      width: 80%;
+      width: 90%;
+      max-width: 1280px;
       margin: 0 auto;
    }
-
 }
+

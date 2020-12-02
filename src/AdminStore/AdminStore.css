@@ -1,0 +1,65 @@
+.form-error{
+    background-color: red;
+}
+
+.store-form label{
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
+}
+.store-form input,
+.store-form textarea,
+.store-form fieldset{
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.store-form textarea{
+    width: 100% !important;
+    height: 250px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.store-form legend{
+    font-weight: 700;
+}
+
+.store-form fieldset label{
+    font-weight: 400;
+}
+
+.admin-store-features{
+    padding-bottom: 40px;
+}
+
+.admin-store-feat{
+    margin-bottom: 20px;
+    padding:20px;
+    background-color: rgba(128,128,128,0.2);
+}
+
+.admin-store-feat button{
+    margin-top:10px;
+    background-color: white;
+}
+
+.admin-store-btns{
+    margin-top: 40px;
+}
+
+.admin-store-btns button{
+    margin-bottom: 10px;
+}
+
+@media screen and (min-device-width: 736px){
+    .AdminStore{
+       width: 90%;
+       max-width: 736px;
+       margin: 0 auto;
+    }
+ }
+ 

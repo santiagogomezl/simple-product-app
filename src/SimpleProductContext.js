@@ -2,11 +2,19 @@ import React from 'react'
 
 const SimpleProductContext = React.createContext(
     {
-        barbells: [],
+        products: [],
         compare:[],
         toCompare: false,
         compareProducts: () => {},
         clearProducts: () => {},
+        //dashboard and admin
+        store:{},
+        updateStore: () => {},
+        updateProduct: () => {},
+        addProduct: () => {},
+        deleteProduct: () => {},
+        logIn: () => {},
+        logOut: () => {},
     }
 )
 

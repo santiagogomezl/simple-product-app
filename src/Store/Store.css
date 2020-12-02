@@ -1,0 +1,20 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.main-header h1{
+    margin: 20px auto;
+    text-transform: uppercase;
+    
+}
+
+.store-products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+

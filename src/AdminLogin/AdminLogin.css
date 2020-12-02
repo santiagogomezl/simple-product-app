@@ -1,0 +1,19 @@
+.login-form{
+    width: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.login-form label,
+.login-form input{
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.login-form input{
+    height: 32px;
+}
+
