@@ -110,7 +110,16 @@ class App extends Component{
 
   updateStore = (store) =>{
     this.setState({
-      store: store
+      store: {
+        storeId: store.id,
+        storeTitle: store.title,
+        storeDescription: store.description,
+        storeFeatures: store.features,
+        storeAdminCreds:{
+          username: 'admin',
+          password: 'admin'
+        }
+      }
     })
   }
 

@@ -189,6 +189,12 @@ class ProductForm extends Component{
     }
   }
 
+  validateFeatures(){
+    if(this.state.features.value.find(feature => feature.feature_value === '')){
+      return <p className='form-error-msg'>{'Enter features values. This field is required'}</p>  
+    }
+  }
+
   validateProductLogo(){
     if(this.state.logo.value === ''){
       return <p className='form-error-msg'>{'Upload product logo. This field is required'}</p>  
@@ -212,7 +218,7 @@ class ProductForm extends Component{
     const name = this.state.name.value
     const details = this.state.details.value
     const price = this.state.price.value
-    const features = this.state.features.value.map(feature => {
+    let features = this.state.features.value.map(feature => {
       return {
           feature_id: feature.feature_id,
           feature_value: feature.feature_value,
@@ -300,7 +306,7 @@ class ProductForm extends Component{
             id={`feature-name-${featureId}`}
             onChange={e => this.updateProductFeatures(e.target.value, featureId)}
             value={feature.feature_value}
-            className={`${feature.touched && this.validateProductFeature(featureId) ? 'form-error' : ''}`}
+            className={`${feature.feature_value === '' || ( feature.touched && this.validateProductFeature(featureId) ) ? 'form-error' : ''}`}
           />
         </div>
       )
@@ -420,9 +426,9 @@ class ProductForm extends Component{
                       this.validateProductName() ||
                       this.validateProductPrice() ||
                       this.validateProductDetails() ||
-                      this.validateProductFeature() ||
                       this.validateProductLogo() ||
-                      this.validateProductImages() 
+                      this.validateProductImages() || 
+                      this.validateFeatures()
                   }
               >Save
               </button>
@@ -437,6 +443,7 @@ class ProductForm extends Component{
                   {this.state.details.touched && this.validateProductDetails()}
                   {this.state.logo.touched && this.validateProductLogo()}
                   {this.state.images.touched && this.validateProductImages()}
+                  {this.validateFeatures()}  
               </div> 
           </form>
           </div>       

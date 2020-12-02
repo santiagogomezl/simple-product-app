@@ -170,11 +170,11 @@ class AdminStore extends Component{
       }
     })  
 
-    const db_store = { title, description, features}
+    const store = { title, description, features}
 
     const options = {
       method: 'PATCH',
-      body: JSON.stringify(db_store),
+      body: JSON.stringify(store),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${config.API_KEY}`
@@ -189,16 +189,10 @@ class AdminStore extends Component{
         return response;
       })
       .then(response => response.json())
-      .then(data => {
-
-        const storeId = data.id
-        const storeTitle = data.title
-        const storeDescription = data.description
-        const storeFeatures = data.features
-        const store = { storeId, storeTitle, storeDescription, storeFeatures}
-
+      .then( () => {
+        
+        const store = { id, title, description, features}
         callback(store)
-       
           this.props.history.push(`/store`);
         }
       )

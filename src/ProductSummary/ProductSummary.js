@@ -47,15 +47,14 @@ class ProductSummary extends Component{
     if(features){
         productFeatures = features.map((feature, i) => {
             const storeFeature = storeFeatures.find(storeFeature => String(storeFeature.feature_id) === String(feature.feature_id))
-            return(
-                <li key={`product-features-sum-${i}`}>
-                    <i className={`fas ${storeFeature.feature_fa_icon}`}></i>
-                    <span>{feature.feature_value}</span>
-                </li>
-            )
+                return(
+                    <li key={`product-features-sum-${i}`}>
+                        <i className={`fas ${storeFeature.feature_fa_icon}`}></i>
+                        <span>{feature.feature_value}</span>
+                    </li>
+                )
         })
     }
-  
 
     return (
         <SimpleProductContext.Consumer>

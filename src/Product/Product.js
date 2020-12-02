@@ -87,7 +87,9 @@ class Product extends Component{
     getFaIcon(featureId){
         const storeFeatures = this.context.store.storeFeatures
         const productFeature = storeFeatures.find(feature => String(feature.feature_id) === String(featureId))
-        return  productFeature.feature_fa_icon
+        if(productFeature){
+            return  productFeature.feature_fa_icon
+        }
     }
 
     render(){
